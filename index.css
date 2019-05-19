@@ -1,0 +1,99 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap);
+
+html, body { height: 100% }
+
+body
+{
+  /* background: linear-gradient(to bottom, #FEECDA, #878d90, #454D52); */
+}
+
+.widget
+{
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 50px auto;
+  background: #FFF;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+}
+
+.widget > .cover
+{
+  height: 160px;
+  overflow: hidden;
+}
+
+.widget > .cover > img
+{
+  width: 100%;
+  height: auto;
+  min-height: 160px;
+  border-radius: 4px 4px 0 0;
+}
+
+.widget > .photo
+{
+  position: absolute;
+  top: 85px;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 0 0 -55px;
+  border: 5px solid #FFF;
+  border-radius: 50%;
+}
+
+.widget > h1, .widget > h2, .widget > h3, .widget > h4
+{
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #999;
+}
+
+.widget > h1
+{
+  font-family: 'Roboto Slab', serif;
+  margin: 60px 0 20px;
+  font-size: 26px;
+  color: #000;
+}
+
+.widget > h3 { font-size: 12px }
+
+.widget > h4 { font-size: 10px }
+
+.widget > ul
+{
+  position: absolute;
+  list-style-type: none;
+  top: 20px;
+  left: 100%;
+  background: #2cbedf;
+  border-radius: 0 3px 3px 0;
+}
+
+.widget > ul > li > a
+{
+  display: block;
+  padding: 5px 6px;
+  color: #FFF;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 1px solid #2CD5CA;
+  transition: background-color .3s;
+}
+
+.widget > ul > li:hover > a { background-color: #2ccedf }
+.widget > ul > li:first-child > a { border-radius: 0 3px 0 0 }
+
+.widget > ul > li:last-child > a
+{
+  border: none;
+  border-radius: 0 0 3px 0;
+}

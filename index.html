@@ -4,96 +4,26 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <title>Tivcrmn</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style media="screen">
-        /* Import Pretty Checkboxes*/
-    @import "https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css";
-    /* Import Varela Round from Google Fonts*/
-    @import url('https://fonts.googleapis.com/css?family=Varela+Round');
-    /*Variables defined*/
-    :root {
-      --main-color: coral;
-      --text-color: #444;
-      --formcolor: white;
-      --button-color: hsl(356, 90%, 64%);
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    html { /* html is full screen. */
-      height: 100%;
-    }
-    body {
-      display: flex;
-      margin-top: 5%;
-      margin-bottom: 5%;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-color);
-      font-family: "Comic Sans MS", cursive, sans-serif; /* Very similar font to Helvetica Round.*/
-      font-size: 1.1rem;
-      font-weight: bold;
-      background: linear-gradient(to bottom, #ecd2ec, #9093f14f, #9afbb8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      background-repeat: no-repeat; /* Don't repeat gradient in landscape mode on mobile phones*/
-      background-attachment: fixed;
-    }
-    .container {
-      display: block;
-      border-radius: 12px;
-      padding: 10vh 10vw;
-      text-align: center;
-    }
-    .avatar {
-      margin-top: 15px;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-    }
-    .icon {
-      width: 40px;
-      height: 40px;
-    }
-    button {
-      border: none;
-      border-radius: .3rem;
-      padding: .7rem 2.5rem;
-      color: white;
-      font-size: 85%;
-      box-shadow: 0 17px 15px -10px rgba(0, 0, 0, .2);
-      outline: none;
-      text-transform: uppercase;
-      margin-top: 1rem;
-      font-family: inherit;
-      transition: box-shadow .1s linear;
-      background: linear-gradient(to right, #9edac4, #4295e4);
-    }
-    button:hover {
-      background: linear-gradient(to right, darken(#9edac4, 5%), darken(#4295e4, 5%));
-      box-shadow: 0 24px 20px -15px rgba(0, 0, 0, 0.2);
-    }
-    button:focus {
-      background: linear-gradient(to right, darken(#9edac4, 10%), darken(#4295e4, 10%));
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-    }
-    .resume {
-      color: white;
-      text-decoration: none;
-    }
-    </style>
+    <link rel="stylesheet" href="index.css">
   </head>
 
   <body>
-    <div class="container">
-      <h1>Tivcrmn</h1>
-      <img class="avatar" src="assets/avatar_small.jpg" alt="">
-      <div>
-        <a href="https://www.facebook.com/profile.php?id=100022871716959" target="_blank"><img class="icon" src="assets/facebook.png"></a>
-        <a href="https://twitter.com/Tivcrmn1" target="_blank"><img class="icon" src="assets/twitter.png"></a>
-        <a href="https://www.linkedin.com/in/jitaoz1/" target="_blank"><img class="icon" src="assets/linkedin.png"></a>
-        <a href="https://github.com/Tivcrmn" target="_blank"><img class="icon" src="assets/github.png"></a>
+    <div class="widget">
+      <div class="cover">
+        <img src="assets/bc.jpeg" />
       </div>
-      <button type="button" name="button"><a class="resume" href="https://www.tivarea.top/resume.pdf">Resume</a></button>
+      <img src="assets/avatar.jpeg" class="photo" />
+      <h1>Jitao Zhang</h1>
+      <h2>Software Engineer</h2>
+      <h3>Irvine, US</h3>
+      <!-- <h4>Front End Development, Network and Startup.</h4> -->
+      <ul style="padding: 0px">
+        <li><a href="https://www.facebook.com/jitaoz1"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/Tivcrmn1"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/jitaoz1/"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/Tivcrmn"><i class="fa fa-github"></i></a></li>
+        <li><a href="./resume.pdf"><i class="fa fa-file"></i></a></li>
+      </ul>
     </div>
   </body>
 </html>
