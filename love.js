@@ -1,7 +1,7 @@
 function show_time() {
   window.setTimeout("show_time()", 1000);
   updateKnowTime(calculate(new Date("5/09/2020 07:46:00")));
-  // updateStartTime(calculate(new Date("6/14/2020 08:03:00")));
+  updateStartTime(calculate(new Date("6/14/2020 08:03:00")));
 }
 
 function calculate(target) {
