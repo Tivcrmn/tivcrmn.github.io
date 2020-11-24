@@ -1,11 +1,10 @@
 function show_time() {
   window.setTimeout("show_time()", 1000);
   updateKnowTime(calculate(new Date("5/09/2020 07:46:00")));
-  // updateStartTime(calculate(new Date("6/14/2020 08:03:00")));
 }
 
 function calculate(target) {
-  today = new Date();
+  today = changeTimezone(new Date(), "America/New_York");
   timeold = (today.getTime() - target.getTime());
   sectimeold = timeold / 1000
   secondsold = Math.floor(sectimeold);
@@ -24,8 +23,20 @@ function updateKnowTime({daysold, hrsold, minsold, seconds}) {
   know_date.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
 }
 
-// function updateStartTime({daysold, hrsold, minsold, seconds}) {
-//   start_date.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
-// }
+function changeTimezone(date, ianatz) {
+
+  // suppose the date is 12:00 UTC
+  var invdate = new Date(date.toLocaleString('en-US', {
+    timeZone: ianatz
+  }));
+
+  // then invdate will be 07:00 in Toronto
+  // and the diff is 5 hours
+  var diff = date.getTime() - invdate.getTime();
+
+  // so 12:00 in Toronto is 17:00 UTC
+  return new Date(date.getTime() - diff); // needs to substract
+
+}
 
 show_time();
