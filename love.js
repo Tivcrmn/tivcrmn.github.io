@@ -6,7 +6,6 @@ function show_time() {
 function calculate() {
   today = changeTimezone(new Date(), "America/Los_Angeles");
   target = changeTimezone(new Date("Sat, 09 May 2020 07:46:00 GMT-0800"), "America/Los_Angeles");
-  console.log(today + " ----- " + target);
   timeold = (today.getTime() - target.getTime());
   sectimeold = timeold / 1000
   secondsold = Math.floor(sectimeold);
@@ -41,4 +40,13 @@ function changeTimezone(date, ianatz) {
 
 }
 
+function show_hearts() {
+  let hearts_string = "";
+  for (let i = 0; i < 200; i++) {
+    hearts_string += "&#10084;&#65039;";
+  }
+  hearts.innerHTML = hearts_string;
+}
+
 show_time();
+show_hearts();

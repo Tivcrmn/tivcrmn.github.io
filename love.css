@@ -98,3 +98,10 @@ section {
     transform-origin: bottom left;
     transform: rotate(45deg);
 }
+
+.hearts {
+    min-width: 400px;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
