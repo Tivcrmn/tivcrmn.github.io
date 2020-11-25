@@ -1,10 +1,12 @@
 function show_time() {
   window.setTimeout("show_time()", 1000);
-  updateKnowTime(calculate(new Date("5/09/2020 07:46:00")));
+  updateKnowTime(calculate());
 }
 
-function calculate(target) {
-  today = changeTimezone(new Date(), "America/New_York");
+function calculate() {
+  today = changeTimezone(new Date(), "America/Los_Angeles");
+  target = changeTimezone(new Date("Sat, 09 May 2020 07:46:00 GMT-0800"), "America/Los_Angeles");
+  console.log(today + " ----- " + target);
   timeold = (today.getTime() - target.getTime());
   sectimeold = timeold / 1000
   secondsold = Math.floor(sectimeold);
@@ -26,13 +28,13 @@ function updateKnowTime({daysold, hrsold, minsold, seconds}) {
 function changeTimezone(date, ianatz) {
 
   // suppose the date is 12:00 UTC
-  var invdate = new Date(date.toLocaleString('en-US', {
+  let invdate = new Date(date.toLocaleString('en-US', {
     timeZone: ianatz
   }));
 
   // then invdate will be 07:00 in Toronto
   // and the diff is 5 hours
-  var diff = date.getTime() - invdate.getTime();
+  let diff = date.getTime() - invdate.getTime();
 
   // so 12:00 in Toronto is 17:00 UTC
   return new Date(date.getTime() - diff); // needs to substract
